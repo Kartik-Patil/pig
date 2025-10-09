@@ -8,10 +8,3 @@ result = FOREACH gender_group GENERATE
     students AS student_bag;   -- Bag of tuples
 
 DUMP result;
-
--- Map Example (roll -> name)
-student_map = FOREACH students GENERATE
-    roll,
-    TOTUPLE(name) AS details;
-
-DUMP student_map;
